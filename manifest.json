@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "pinshot",
+  "version": "1.0.0",
+  "author": "cheo <the7mincheol@gmail.com>",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {}
+}
