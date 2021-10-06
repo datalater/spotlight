@@ -1,39 +1,22 @@
-console.log('In current tab: content-script executed');
+const mask = document.createElement('div');
+mask.setAttribute('class', 'spotlight-mask');
 
-const background = document.createElement('div');
-background.setAttribute('class', 'spotlight-background');
-document.body.appendChild(background);
+const beam = (event) => {
+  const coord = `${event.clientX}px ${event.clientY}px`;
 
-const cursor = document.createElement('div');
-cursor.setAttribute('class', 'spotlight-cursor');
-document.body.appendChild(cursor);
-
-const spotlight = (event) => {
-  cursor.style.top = `${event.pageY}px`;
-  cursor.style.left = `${event.pageX}px`;
+  mask.style.backgroundImage = `radial-gradient(circle at ${coord}, transparent 150px, rgba(0, 0, 0, 0.4) 0)`;
 };
 
-document.addEventListener('mouseover', spotlight);
-
 window.addEventListener('keydown', (event) => {
-  if (event.key !== 'Escape') {
-    return;
-  }
-
   if (event.shiftKey) {
-    document.removeEventListener('mouseover', spotlight);
-    document.addEventListener('mouseover', spotlight);
-
-    if (!document.body.querySelector('.spotlight-cursor')) {
-      document.body.appendChild(cursor);
-    }
-
-    return;
+    document.body.appendChild(mask);
+    window.addEventListener('mousemove', beam);
   }
+});
 
-  document.removeEventListener('mouseover', spotlight);
-
-  if (document.body.querySelector('.spotlight-cursor')) {
-    document.body.removeChild(cursor);
+window.addEventListener('keyup', (event) => {
+  if (event.key === 'Shift') {
+    document.body.removeChild(mask);
+    window.removeEventListener('mousemove', beam);
   }
 });

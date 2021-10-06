@@ -1,7 +1,7 @@
 {
   "name": "spotlight",
   "version": "1.0.0",
-  "description": "Highlight your cursor",
+  "description": "Spotlight your cursor",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
