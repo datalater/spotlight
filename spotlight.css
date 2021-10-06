@@ -1,5 +1,5 @@
-.pinshot-background {
-  background-color: #06060687;
+.spotlight-background {
+  background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
   right: 0;
@@ -8,7 +8,7 @@
   z-index: 9999
 }
 
-.pinshot-cursor {
+.spotlight-cursor {
   position: absolute;
   /* background-color: #f0f0f0; */
   width: 5rem;
