@@ -1,7 +1,9 @@
+const { log } = console;
+
 let isActivated = false;
 
 chrome.action.onClicked.addListener((tab) => {
-  console.log('In Service Worker: toolbar clicked');
+  log('In Service Worker: toolbar clicked');
 
   if (!isActivated) {
     chrome.scripting.executeScript({

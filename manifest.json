@@ -7,5 +7,11 @@
   "background": {
     "service_worker": "background.js"
   },
-  "action": {}
+  "action": {},
+  "icons": {
+    "16": "/images/white-flashlight16.png",
+    "32": "/images/white-flashlight32.png",
+    "48": "/images/white-flashlight48.png",
+    "128": "/images/white-flashlight128.png"
+  }
 }

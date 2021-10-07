@@ -1,3 +1,7 @@
+const { log } = console;
+
+log('spotlight is enabled');
+
 const mask = document.createElement('div');
 mask.setAttribute('class', 'spotlight-mask');
 
