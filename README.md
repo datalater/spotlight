@@ -1,30 +1,22 @@
-# 제작기
+# 스포트라이트 크롬 익스텐션
 
-작업순서:
+## 설치
 
-1. `background-image: radial-gradient()` 사용법 익히기
+1. 레포를 다운로드합니다:
 
-```css
-.spotlight-mask  {
-  /* A gradient at the center of its container,
-     with transparent background and size of 150px,
-     starting rgba(0, 0, 0, 0.4) */
-  background-image: 
-    radial-gradient(
-      circle at center, 
-      transparent 150px, 
-      rgba(0, 0, 0, 0.4) 0
-    );
-}
+```bash
+git clone https://github.com/datalater/spotlight.git
 ```
+  
+2. 크롬을 열고 URL에 다음 주소를 입력합니다: `chrome://extensions`
+3. 오른쪽 상단에서 토글 스위치를 눌러 **개발자 모드**를 활성화 합니다.
+4. `Load unpacked` 버튼을 누르고 확장 프로그램에 있는 디렉토리를 선택합니다.
 
-> [mdn - radial-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient())
+![개발자 모드 활성화](images/2021-10-07-09-40-12.png)
+![크롬 익스텐션 장착](images/2021-10-07-09-38-31.png)
 
-2. 마우스 이벤트의 좌표 속성 차이점 익히기
+## See also
 
-- `clientX`: 현재 보이는 화면 내의 X 좌표
-- `offsetX`: 이벤트가 걸려 있는 DOM 요소 기준의 상대적 X 좌표
-- `pageX`: 스크롤 화면을 포함한 전체 문서 기준의 X 좌표
-- `screenX`: 사용자의 모니터 화면 전체 기준의 X 좌표
+- [Chrome Developers - Getting started](https://developer.chrome.com/docs/extensions/mv3/getstarted/)
 
-> [metagon111 - clientX, offsetX, pageX, screenX의 차이](http://megaton111.cafe24.com/2016/11/29/clientx-offsetx-pagex-screenx%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90/) 
+
