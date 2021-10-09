@@ -1,4 +1,4 @@
-const { log } = console;
+const { log, error } = console;
 
 log('SPOTLIGHT ENABLED');
 
@@ -20,7 +20,11 @@ window.addEventListener('keydown', (event) => {
 
 window.addEventListener('keyup', (event) => {
   if (event.key === 'Shift') {
-    document.body.removeChild(mask);
-    window.removeEventListener('mousemove', beam);
+    try {
+      document.body.removeChild(mask);
+      window.removeEventListener('mousemove', beam);
+    } catch (e) {
+      error(e);
+    }
   }
 });
