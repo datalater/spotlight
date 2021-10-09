@@ -17,5 +17,9 @@ chrome.action.onClicked.addListener((tab) => {
     });
 
     isActivated = true;
+  } else {
+    isActivated = false;
   }
+
+  log(`activated: ${isActivated}`);
 });
