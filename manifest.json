@@ -4,7 +4,7 @@
   "name": "spotlight",
   "version": "1.0.0",
   "author": "cheo <the7mincheol@gmail.com>",
-  "permissions": ["activeTab", "scripting", "tabs"],
+  "permissions": ["activeTab", "scripting"],
   "background": {
     "service_worker": "background.js"
   },
