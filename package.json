@@ -2,10 +2,13 @@
   "name": "spotlight",
   "version": "1.0.0",
   "description": "Spotlight your cursor",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "keywords": [
+    "spotlight",
+    "cursor",
+    "mouse",
+    "pointer",
+    "focus"
+  ],
   "author": "cheo <the7mincheol@gmail.com>",
   "license": "ISC",
   "devDependencies": {
